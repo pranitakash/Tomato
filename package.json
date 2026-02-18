@@ -1,0 +1,11 @@
+{
+    "name": "tomato-monorepo",
+    "private": true,
+    "scripts": {
+        "dev:frontend": "npm run dev --prefix frontend",
+        "dev:auth": "npm run dev --prefix services/auth",
+        "dev:restaurant": "npm run dev --prefix services/restaurant",
+        "dev:all": "npx -y concurrently \"npm run dev:frontend\" \"npm run dev:auth\" \"npm run dev:restaurant\"",
+        "dev": "npm run dev:frontend"
+    }
+}
